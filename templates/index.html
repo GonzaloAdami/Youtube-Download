@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">>
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+</head>
+
+<body>
+    <section>
+        <h1>Descarga videos de <span>youtube</span></h1>
+        <form action="/download" method="post">
+            <input type="text" placeholder="URL" id="URL" name="url">
+            <div class="options">
+                <select name="format" id="">
+                    <option value="mp4">MP4</option>
+                </select>
+                <select name="resolution" id="">
+                    <option value="720p">720p</option>
+                    <option value="1080p">1080p</option>
+                </select>
+            </div>
+            <button type="submit" id="download">Descargar</button>
+        </form>
+        
+        <article class="message">
+            <p>
+                {% with messages = get_flashed_messages() %} <br>
+                {% if messages %}
+            </p>
+            <ul class="messages">
+                <p>{% for message in messages %}</p>
+                <li>{{ message }}</li>
+                <p>{% endfor %}</p>
+            </ul>
+            <p>{% endif %}</p>
+            <p>{% endwith %}</p>
+        </article>
+
+    </section>
+</body>
+
+</html>

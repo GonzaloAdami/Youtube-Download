@@ -1,0 +1,79 @@
+html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background-color: #2B2D42;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.options{
+    display: flex;
+    gap: 1em;
+}
+h1{
+    color: #EDF2F4;
+    font-size: 2em;
+}
+span{
+    color: #D80032;
+}
+input{
+    border-radius: 20px;
+    padding: 0.5em 2em;
+    border: none;
+    width: 30em;
+    font-size: 1em;
+}
+input:focus{
+    outline: none;
+
+}
+
+select{
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    padding: 0.2em 1em;
+    font-weight: 600;
+}
+
+button{
+    border-radius: 20px;
+    background-color: #EF233C;
+    color: #EDF2F4;
+    border: none;
+    padding: 0.5em 2em;
+    font-weight: 600;
+    font-size: 1em;
+    transition: transform 0.5s ease-in-out;
+}
+button:active{
+    transform: scale(0.9);
+}
+
+.message p{
+    color: #EDF2F4;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+.message{
+    background-color: rgba(0, 237, 99, 0.408);
+    border-radius: 20px;
+  
+    margin-top: 2em;
+}
